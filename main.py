@@ -11,9 +11,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def main_page():
-    db_sess = db_session.create_session()
-    msls = db_sess.query(Category).all()
-    return render_template("base.html", title="Главная", data=msls)
+    # db_sess = db_session.create_session()
+    # msls = db_sess.query(Category).all()
+    return render_template("lending.html", title="Главная")
 
 
 if __name__ == '__main__':
