@@ -7,7 +7,16 @@ body {
     min-width: 500px;
 }
 
-article.start {
+section {
+    display: block;
+}
+
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.start {
     background: 
     linear-gradient(
       rgba(0, 0, 0, 0.7), 
@@ -19,13 +28,13 @@ article.start {
     background-size: cover;
 }
 
-article.start h1 {
+.start h1 {
     text-align: center;
     color: white;
     font-size: 58pt;
 }
 
-article.start h3 {
+.start h3 {
     text-align: center;
     color: wheat;
     font-size: 30pt;
@@ -47,10 +56,11 @@ article.start h3 {
     text-align: center;
 }
 
-article.choice {
-    height: 85vh;
+.choice {
+
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 40px;
 }
 .choice__categories {
     text-align: center;
@@ -73,15 +83,33 @@ footer {
     padding-bottom: 10px;
 }
 
+.exercises {
+    margin: 30vh 20% 30vh 20%;
+}
+
+.exercises h1 {
+    font-size: 40pt;
+    font-weight: 600;
+}
+
+.exercises h2 {
+    font-size: 20pt;
+}
+.exercises__list {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 @media screen and (max-width: 1322px){
-    article.start {
+    .start {
         background: 
         linear-gradient(
           rgba(0, 0, 0, 0.7), 
           rgba(0, 0, 0, 0.7)
         ),
         url(/static/img/gym1.jpg);
-        height: 130vh;
+        height: 150vh;
         background-repeat: no-repeat;
         background-size: cover;
     }
