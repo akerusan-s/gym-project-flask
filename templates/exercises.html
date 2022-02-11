@@ -16,26 +16,26 @@
 
     <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">ModernGym</a>
+        <a class="navbar-brand" href="/">ModernBMX</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ModernGym</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ModernBMX</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color:black;">Упражнения</a>
+                <a class="nav-link" href="#" style="color:black;">Обучение трюкам</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color:black;">Библеотека мышц</a>
+                <a class="nav-link" href="#" style="color:black;">Новости</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color:black;">Программы тренировок</a>
+                <a class="nav-link" href="#" style="color:black;">Полезные статьи</a>
             </li>
 
             </ul>
@@ -46,34 +46,89 @@
     </nav>
 
 
-<article class="exercises">
+<section class="exercises">
+
     <div class="exercises__header">
-        <h1>Упражнения</h1>
-        <h2>Выбери нужное упражнение из списка ниже!</h2>
+        <h1>Трюки BMX</h1>
+        <h2>Выбери нужный трюк из списка ниже!</h2>
     </div>
-    <div class="exercises__list">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Упражнение</th>
-                <th scope="col">Категория</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="">Разведение гантелей в наклоне</a></td>
-                <td>Плечи</td>
-              </tr>
-              <tr>
-                <td><a href="">Подъем гантелей перед собой</a></td>
-                <td>Плечи</td>
-              </tr>
+  
+    <div class="exercises__list row row-cols-1 row-cols-sm-1 row-cols-md-3">
+      
+      <div class="col mb-3">
+        <div class="card">
+          <img src="../static/img/ex1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/article/atricle.id"><h5 class="card-title">Название статьи</h5></a>
+            <p class="card-text">Предисловие к статье</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/users/id">Автор</a></li>
+            <li class="list-group-item">Дата публикации</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">BMX</a>
+            <a href="#" class="card-link">Обучение</a>
+          </div>
+        </div>
+      </div>
 
+      <div class="col mb-3">
+        <div class="card">
+          <img src="../static/img/ex2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/article/atricle.id"><h5 class="card-title">Название статьи</h5></a>
+            <p class="card-text">Предисловие к статье</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/users/id">Автор</a></li>
+            <li class="list-group-item">Дата публикации</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">BMX</a>
+            <a href="#" class="card-link">Обучение</a>
+          </div>
+        </div>
+      </div>
 
-            </tbody>
-          </table>
+      <div class="col mb-3">
+        <div class="card">
+          <img src="../static/img/bmx_lend.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/article/atricle.id"><h5 class="card-title">Название статьи</h5></a>
+            <p class="card-text">Предисловие к статье</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/users/id">Автор</a></li>
+            <li class="list-group-item">Дата публикации</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">BMX</a>
+            <a href="#" class="card-link">Обучение</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-3">
+        <div class="card">
+          <img src="../static/img/ex3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/article/atricle.id"><h5 class="card-title">Название статьи</h5></a>
+            <p class="card-text">Предисловие к статье</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/users/id">Автор</a></li>
+            <li class="list-group-item">Дата публикации</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">BMX</a>
+            <a href="#" class="card-link">Обучение</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-</article>
+</section>
 
 
 

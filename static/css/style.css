@@ -11,6 +11,14 @@ section {
     display: block;
 }
 
+.exercises .card-img-top {
+    max-height: 400px;
+    max-width: 400px;
+    width:fit-content;
+    align-self: center;
+    padding-top: 10px;
+}
+
 .container-fluid {
     padding-left: 30px;
     padding-right: 30px;
@@ -22,7 +30,7 @@ section {
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
     ),
-    url(/static/img/gym1.jpg);
+    url(/static/img/bmx_lend2.jpg);
     height: 110vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,7 +92,7 @@ footer {
 }
 
 .exercises {
-    margin: 30vh 20% 30vh 20%;
+    margin: 10vh 10% 10vh 10%;
 }
 
 .exercises h1 {
@@ -101,19 +109,28 @@ footer {
     padding-right: 15px;
 }
 
-@media screen and (max-width: 1322px){
+@media screen and (max-width: 1000px){
     .start {
         background: 
         linear-gradient(
           rgba(0, 0, 0, 0.7), 
           rgba(0, 0, 0, 0.7)
         ),
-        url(/static/img/gym1.jpg);
+        url(/static/img/bmx_lend.jpg);
         height: 150vh;
         background-repeat: no-repeat;
         background-size: cover;
     }
     .start__span {
         padding-top: 20vh;
+    }
+    .exercises {
+        margin: 100px 10% 100px 10%;
+    }
+    .exercises .card-img-top {
+        width: 290px;
+        height: auto;
+        max-height: 800px;
+        padding-top: 10px;
     }
 }
