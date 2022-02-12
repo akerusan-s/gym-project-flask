@@ -109,6 +109,38 @@ footer {
     padding-right: 15px;
 }
 
+.article {
+    padding: 10vh 20%;
+}
+
+.article h2 {
+    font-size: 36pt;
+}
+
+.article small {
+    font-size: 16pt;
+    color: rgba(0, 0, 0, 0.719);
+}
+
+.article__caro {
+    margin: 40px 0px 80px;
+}
+
+.article__caro img {
+    width: 800px;
+    height: 600px;
+    object-fit: contain;
+}
+
+.article__text {
+    font-size: 16pt;
+}
+
+.article__author {
+    font-size: 14pt;
+    padding-top: 10px;
+}
+
 @media screen and (max-width: 1000px){
     .start {
         background: 
@@ -132,5 +164,12 @@ footer {
         height: auto;
         max-height: 800px;
         padding-top: 10px;
+    }
+    .article__caro {
+        margin: 30px 0px 60px;
+    }
+    .article__caro img {
+        height: 400px;
+        object-fit: contain;
     }
 }

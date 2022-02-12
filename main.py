@@ -18,12 +18,12 @@ def problem_404(e):
 def main_page():
     # db_sess = db_session.create_session()
     # msls = db_sess.query(Category).all()
-    return render_template("lending.html", title="Главная")
+    return render_template("lending.html", title="ModernBMX: Главная")
 
 
 @app.route("/exercises")
 def exercises():
-    return render_template("exercises.html", title="Обучение")
+    return render_template("exercises.html", title="ModernBMX: Обучение")
 
 
 if __name__ == '__main__':
