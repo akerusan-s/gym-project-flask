@@ -9,10 +9,21 @@ from data import db_session
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = ''
+app.config['MAX_CONTENT_LENGTH'] = 20 * 1024 * 1024
+
 
 @app.errorhandler(404)
 def problem_404(e):
     return render_template("error404.html", title="ModernBMX|Страница в разработке")
+
+
+@app.errorhandler(413)
+def problem_413(e):
+    db_sess = db_session.create_session()
+    tags = db_sess.query(Category).all()
+    types = db_sess.query(ArticleType).all()
+    return render_template("make_article.html", title="ModernBMX|Создать статью",
+                           alert="Файл слишком большой (максимум 20мб)", tags=tags, types=types)
 
 
 @app.route("/")
