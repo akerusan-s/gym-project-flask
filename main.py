@@ -105,15 +105,18 @@ def article_create():
     return render_template("make_article.html", title="ModernBMX|Создать статью", alert="", tags=tags, types=types)
 
 
-@app.route("/delete")
+@app.route("/delete", methods=['GET', 'POST'])
 def article_delete():
     db_sess = db_session.create_session()
     articles = db_sess.query(Article).all()
-
     if request.method == 'POST':
         id_ = request.form.get('id_')
-        art = db_sess.query(Article).filter(Article.id == id_).delete()
-        shutil.rmtree(f"static/img/articles/{id_}")
+        db_sess.query(Article).filter(Article.id == id_).delete()
+        db_sess.commit()
+        try:
+            shutil.rmtree(f"static/img/articles/{id_}")
+        except Exception:
+            pass
         return redirect(url_for('article_delete'))
 
     return render_template("delete_article.html", title="ModernBMX|Удалить статью", alert="", articles=articles)
