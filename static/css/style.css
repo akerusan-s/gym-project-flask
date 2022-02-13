@@ -12,11 +12,14 @@ section {
 }
 
 .exercises .card-img-top {
-    max-height: 400px;
-    max-width: 400px;
-    width:fit-content;
+
+
+    object-fit: contain;
+    height: 400px;
     align-self: center;
     padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .container-fluid {
@@ -139,6 +142,15 @@ footer {
 .article__author {
     font-size: 14pt;
     padding-top: 10px;
+}
+
+.creation {
+    padding: 80px 180px;
+}
+
+.creation form {
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 1000px){
