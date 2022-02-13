@@ -52,7 +52,7 @@
 
         <div class="mb-3">
             <label for="exampleDataList" class="form-label">Выбрать статью</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Начни набирать" name="id_">
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Начни набирать" name="id_" autocomplete="off">
             <datalist id="datalistOptions">
                 {%for article in articles%}
                 <option value="{{article.id}}">{{article.name}}</option>

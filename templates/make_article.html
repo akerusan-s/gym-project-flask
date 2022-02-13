@@ -52,22 +52,22 @@
 
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Название статьи</label>
-          <input class="form-control" type="text" placeholder="" aria-label="default input example" name="name">
+          <input class="form-control" type="text" placeholder="" aria-label="default input example" name="name" autocomplete="off">
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Вступление статьи (100 символов)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="100" name="description"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="100" name="description" autocomplete="off"></textarea>
         </div>
 
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Текст статьи (10000 символов)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" maxlength="10000" name="text"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" maxlength="10000" name="text" autocomplete="off"></textarea>
         </div>
 
         <div class="mb-3">
             <label for="exampleDataList" class="form-label">Категория</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Начни набирать" name="category">
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Начни набирать" name="category" autocomplete="off">
             <datalist id="datalistOptions">
                 {%for tag in tags%}
                 <option value="{{tag.id}}">{{tag.name}}</option>
@@ -77,7 +77,7 @@
 
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Вид</label>
-            <select class="form-select" aria-label="Default select example" name="type_">
+            <select class="form-select" aria-label="Default select example" name="type_" autocomplete="off">
                 {%for type in types%}
                 <option value="{{type.id}}">{{type.name}}</option>
                 {%endfor%}

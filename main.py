@@ -8,7 +8,7 @@ from data import db_session
 
 
 app = Flask(__name__)
-
+app.config['UPLOAD_FOLDER'] = ''
 
 @app.errorhandler(404)
 def problem_404(e):
@@ -93,13 +93,15 @@ def article_create():
         )
         db_sess.add(article)
         db_sess.commit()
+
         os.mkdir(f"static/img/articles/{article.id}")
+        app.config['UPLOAD_FOLDER'] = f"static/img/articles/{article.id}"
         if photos:
             photo_num = -1
             for photo in photos:
                 photo_num += 1
                 if photo.filename != '':
-                    photo.save(f"static/img/articles/{article.id}/{photo_num}.png")
+                    photo.save(os.path.join(app.config['UPLOAD_FOLDER'], f"{photo_num}.png"))
         return redirect(url_for('article_create'))
 
     return render_template("make_article.html", title="ModernBMX|Создать статью", alert="", tags=tags, types=types)
